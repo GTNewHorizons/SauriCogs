@@ -133,8 +133,8 @@ class Gallery(commands.Cog):
                 uri = uri.split("?")[0]
                 parts = uri.split(".")
                 extension = parts[-1]
-                imageTypes = ["jpg", "jpeg", "tiff", "png", "gif", "bmp"]
-                if extension in imageTypes:
+                imageTypes = ["jpg", "jpeg", "tiff", "png", "gif", "bmp", "mp4", "mov", "webm", "avi", "mkv", "webp"]
+                if extension.lower() in imageTypes:
                     return
             rid = await self.config.guild(message.guild).whitelist()
             time = await self.config.guild(message.guild).time()
